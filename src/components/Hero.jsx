@@ -10,8 +10,9 @@ export default function Hero() {
       <div className="meteor meteor3" />
 
       {/* Contenido */}
-      <h2 className="text-4xl md:text-5xl font-bold z-10">Hola, soy Brayan Arias</h2>
-      <p className="mt-4 text-lg md:text-xl z-10">
+      <h2 className="text-3xl md:text-5xl font-bold text-center z-10">
+        Hola, soy Brayan Arias</h2>
+      <p className="mt-4 text-base md:text-xl z-10 px-4 max-w-xl mx-auto">
         Desarrollador Frontend especializado en React.
       </p>
       <a href="#projects" className="mt-6 px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-full text-white z-10">

@@ -11,13 +11,13 @@ export default function Projects() {
     },
     {
       title: 'Contador de Clics',
-      description: 'Aplicación básica para contar clics usando componentes funcionales en React.',
+      description: 'App básica para contar clics usando componentes funcionales en React.',
       image: '/contador.jpg.PNG',
       link: 'https://tusitio.com/contador-de-clics',
     },
     {
       title: 'CRUD Finanzauto',
-      description: 'Aplicación CRUD para gestión financiera con React, hooks y localStorage.',
+      description: 'Gestión de clientes con React, hooks y localStorage.',
       image: '/crud-finanzauto.jpg.PNG',
       link: 'https://tusitio.com/crud-finanzauto',
     },
@@ -26,14 +26,14 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 px-6 bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-500"
+      className="py-20 px-4 sm:px-6 bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-500"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Proyectos</h2>
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+            className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 w-full"
           >
             <img
               src={project.image}
@@ -42,9 +42,7 @@ export default function Projects() {
             />
             <div className="p-6">
               <h3 className="text-xl font-bold">{project.title}</h3>
-              <p className="mt-2 text-gray-600 dark:text-gray-300">
-                {project.description}
-              </p>
+              <p className="mt-2 text-gray-600 dark:text-gray-300">{project.description}</p>
               <a
                 href={project.link}
                 target="_blank"

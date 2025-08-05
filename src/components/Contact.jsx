@@ -6,9 +6,10 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 px-6 bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-500"
+      className="py-20 px-4 sm:px-6 bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-500"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Contacto</h2>
+
       <div className="flex flex-wrap justify-center gap-6 text-3xl">
         <a
           href="https://github.com/BrayanAriasPayanene"
