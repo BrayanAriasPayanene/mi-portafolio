@@ -11,10 +11,12 @@ export default function Navbar({ onToggleTheme, theme }) {
         <a href="#skills" className="hover:text-purple-400 transition-colors">Habilidades</a>
         <a href="#projects" className="hover:text-purple-400 transition-colors">Proyectos</a>
         <a href="#contact" className="hover:text-purple-400 transition-colors">Contacto</a>
-        <button 
-        onClick={onToggleTheme} 
-        className="text-yellow-400 hover:text-yellow-500 transition">
-          {theme === 'light' ? '🌙' : '☀️'}
+        <button
+          onClick={onToggleTheme}
+          aria-label="Toggle theme"
+          className="p-2 rounded-full border border-transparent hover:border-purple-500 transition"
+        >
+          {theme === 'dark' ? <FaSun className="text-yellow-400" /> : <FaMoon className="text-gray-700" />}
         </button>
       </div>
     </nav>

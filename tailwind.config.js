@@ -1,12 +1,17 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
-  darkMode: 'class', // <-- Esto es obligatorio
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}", // <-- Asegúrate que esté bien la ruta
-  ],
+  darkMode: 'class',
+  content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // opcional: unifica tonos si quieres que "dark" use exactamente los mismos grises ajustando aquí
+        'bg-default': 'var(--tw-bg-opacity)', 
+      },
+      animation: {
+        'spin-slow': 'spin 10s linear infinite',
+      },
+    },
   },
   plugins: [],
 }

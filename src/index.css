@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-500;
+html {
+  transition: background-color 0.5s, color 0.5s;
 }
 
 @keyframes fade-in {
