@@ -6,19 +6,19 @@ const projects = [
     title: 'Portafolio',
     description: 'Diseño personal con React y Tailwind CSS inspirado en el cosmos.',
     image: '/portafolio.jpg.PNG',
-    link: 'https://tu-dominio.com/portafolio',
+    link: 'https://mi-portafolio-iota-two.vercel.app/',
   },
   {
     title: 'Contador de Clics',
     description: 'App para contar clics usando React funcional y hooks.',
     image: '/contador.jpg.PNG',
-    link: 'https://tu-dominio.com/contador',
+    link: 'https://contador-de-clics-beryl.vercel.app/',
   },
   {
     title: 'CRUD Finanzauto',
     description: 'Gestión de clientes con React, hooks y almacenamiento local.',
     image: '/crud-finanzauto.jpg.PNG',
-    link: 'https://tu-dominio.com/crud-finanzauto',
+    link: 'https://crud-finanzauto.vercel.app/crear',
   },
 ];
 
