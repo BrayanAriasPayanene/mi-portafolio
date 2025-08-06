@@ -24,7 +24,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-500">
+    <section id="contact" className="relative z-10 py-20 px-6 bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-500">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Contacto</h2>
 
       <form ref={form} onSubmit={sendEmail} className="max-w-xl mx-auto flex flex-col gap-4">

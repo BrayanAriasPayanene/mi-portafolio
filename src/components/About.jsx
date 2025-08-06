@@ -5,7 +5,7 @@ export default function AboutMe() {
   return (
     <Motion.section
       id="about"
-      className="py-16 px-4 bg-white dark:bg-[#0f172a] text-gray-900 dark:text-white"
+      className="relative z-10 py-16 px-4 bg-white dark:bg-[#0f172a] text-gray-900 dark:text-white"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -13,7 +13,7 @@ export default function AboutMe() {
     >
       <div className="max-w-5xl mx-auto">
         <Motion.h2
-          className="text-3xl font-bold text-center mb-10"
+          className="text-3xl font-bold text-center mb-10 glow-text"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}

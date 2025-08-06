@@ -4,8 +4,26 @@
 
 html {
   transition: background-color 0.5s, color 0.5s;
+  height: 100%;
 }
 
+body {
+  min-height: 100%;
+  position: relative;
+}
+
+/* 🌌 Fondo galáctico en modo oscuro en toda la página */
+body.dark::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('/galaxy-bg.jpg') center center / cover no-repeat;
+  opacity: 0.3;
+  z-index: -10;
+  pointer-events: none;
+}
+
+/* ✅ Animación de fade-in para elementos */
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -13,4 +31,45 @@ html {
 
 .animate-fade-in {
   animation: fade-in 0.5s ease-out forwards;
+}
+
+/* ✅ Sombra de texto fija (modo claro) */
+.text-shadow {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ Glow animado en modo oscuro */
+.glow-text {
+  position: relative;
+  z-index: 1;
+}
+
+.glow-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.5;
+  transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Modo oscuro: glow claro y animado */
+.dark .glow-text::after {
+  opacity: 0.3;
+  filter: blur(12px);
+  animation: glow-pulse 3s infinite ease-in-out;
+}
+
+/* ✅ Animación de glow pulsante */
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    filter: blur(12px);
+  }
+  50% {
+    opacity: 0.5;
+    filter: blur(15px);
+  }
 }

@@ -30,7 +30,7 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="py-20 px-4 sm:px-6 bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-500"
+      className="relative z-10 py-20 px-4 sm:px-6 bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-500"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Contáctame</h2>
 
