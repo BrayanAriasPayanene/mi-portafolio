@@ -22,13 +22,13 @@ const projects = [
   },
     {
     title: 'Tienda tecnologica',
-    description: 'Gestión de clientes con React, hooks y almacenamiento local.',
+    description: 'Aplicación de gestión de inventario y clientes desarrollada con React y Hooks, que permite agregar, editar y eliminar productos, administrar stock, y almacenar datos de forma local para una experiencia rápida y dinámica.',
     image: '/tienda-tecnologica.jpg',
     link: 'https://inventario-frontend-eight.vercel.app/',
   },
     {
     title: 'Api Clima',
-    description: 'Gestión de clientes con React, hooks y almacenamiento local.',
+    description: 'Aplicación web que consume datos de una API de clima en tiempo real, mostrando pronósticos, temperatura, humedad y condiciones climáticas. Desarrollada con React y Hooks, con manejo dinámico del estado y diseño responsive.',
     image: '/api-clima.jpg',
     link: 'https://api-clima-3d.vercel.app/',
   },
