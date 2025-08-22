@@ -20,6 +20,18 @@ const projects = [
     image: '/crud-finanzauto.jpg.PNG',
     link: 'https://crud-finanzauto.vercel.app/crear',
   },
+    {
+    title: 'Tienda tecnologica',
+    description: 'Gestión de clientes con React, hooks y almacenamiento local.',
+    image: '/tienda-tecnologica.jpg',
+    link: 'https://inventario-frontend-eight.vercel.app/',
+  },
+    {
+    title: 'Api Clima',
+    description: 'Gestión de clientes con React, hooks y almacenamiento local.',
+    image: '/api-clima.jpg',
+    link: 'https://api-clima-3d.vercel.app/',
+  },
 ];
 
 export default function Projects() {
