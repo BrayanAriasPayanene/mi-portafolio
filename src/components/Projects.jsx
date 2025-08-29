@@ -24,7 +24,7 @@ const projects = [
   {
     title: 'Tienda tecnológica',
     description: 'Aplicación de gestión de inventario y clientes con React y Hooks.',
-    image: '/tienda-tecnologica.jpg',
+    image: '/tecnologica.jpg',
     link: 'https://inventario-frontend-eight.vercel.app/',
   },
   {
