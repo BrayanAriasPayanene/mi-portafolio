@@ -1,6 +1,6 @@
 // src/components/Projects.jsx
-import React, { useRef, useEffect, useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
 
 const projects = [
   { 
@@ -35,57 +35,41 @@ const projects = [
   },
 ];
 
+// Variantes de movimiento infinito
+const sliderVariants = {
+  animate: {
+    x: ["0%", "-100%"], // de inicio a fin
+    transition: {
+      x: {
+        repeat: Infinity,
+        repeatType: "loop",
+        duration: 25, // velocidad (ajústala a tu gusto)
+        ease: "linear",
+      },
+    },
+  },
+};
+
 export default function Projects() {
-  const scrollRef = useRef(null);
-  const [isHovered, setIsHovered] = useState(false);
-
-  const scroll = (direction) => {
-    if (!scrollRef.current) return;
-    const scrollAmount = 320; // ajustado para alinear con las cards
-    scrollRef.current.scrollBy({
-      left: direction === 'left' ? -scrollAmount : scrollAmount,
-      behavior: 'smooth',
-    });
-  };
-
-  // Autoplay cada 4 segundos (se detiene en hover)
-  useEffect(() => {
-    if (isHovered) return;
-    const interval = setInterval(() => {
-      scroll('right');
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [isHovered]);
-
   return (
     <section
       id="projects"
-      className="relative z-10 py-20 bg-white dark:bg-gray-900 dark:text-white transition-colors duration-500"
+      className="relative z-10 py-20 bg-white dark:bg-gray-900 dark:text-white transition-colors duration-500 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Mis Proyectos
         </h2>
 
-        <div
-          className="relative"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          {/* Botón izquierda */}
-          <button
-            onClick={() => scroll('left')}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700/60 hover:bg-gray-800 text-white rounded-full p-2 z-10"
+        {/* Carrusel infinito */}
+        <div className="relative w-full overflow-hidden">
+          <motion.div
+            className="flex gap-6"
+            variants={sliderVariants}
+            animate="animate"
           >
-            <ChevronLeft size={24} />
-          </button>
-
-          {/* Contenedor de proyectos con scroll oculto */}
-          <div
-            ref={scrollRef}
-            className="flex gap-6 overflow-x-auto scroll-smooth pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
-          >
-            {projects.map((p, i) => (
+            {/* Duplicamos el array para lograr el loop */}
+            {[...projects, ...projects].map((p, i) => (
               <a
                 key={i}
                 href={p.link}
@@ -113,15 +97,7 @@ export default function Projects() {
                 </div>
               </a>
             ))}
-          </div>
-
-          {/* Botón derecha */}
-          <button
-            onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700/60 hover:bg-gray-800 text-white rounded-full p-2 z-10"
-          >
-            <ChevronRight size={24} />
-          </button>
+          </motion.div>
         </div>
       </div>
     </section>
